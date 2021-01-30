@@ -1,0 +1,41 @@
+{
+  "build": {
+    "productName": "Gitpod",
+    "win": {
+      "target": [
+        "portable",
+        "nsis",
+        "zip"
+      ],
+      "icon": "gitpod.ico"
+    },
+    "linux": {
+      "target": [
+        "appimage",
+        "zip",
+        "deb",
+        "tar.xz"
+      ],
+      "icon": "gitpod.png",
+      "category": "Development"
+    },
+    "icon": "gitpod.png"
+  },
+  "name": "gitpod-desktop",
+  "version": "1.0.0",
+  "description": "Gitpod for Desktop.",
+  "repository": {
+    "url": "https://github.com/dragonDScript/gitpod-desktop.git"
+  },
+  "main": "main.js",
+  "author": "dragonDScript",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1"
+  }
+}
