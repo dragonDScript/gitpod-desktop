@@ -14,7 +14,8 @@
         "appimage",
         "zip",
         "deb",
-        "tar.xz"
+        "tar.xz",
+        "snap"
       ],
       "icon": "gitpod.png",
       "category": "Development"
