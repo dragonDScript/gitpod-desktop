@@ -1,5 +1,7 @@
 # Gitpod Desktop
 
+<img src="./screenshot.png">
+
 Gitpod Desktop provides gitpod in a window, with shortcuts enabled.
 
 ### Contributing
