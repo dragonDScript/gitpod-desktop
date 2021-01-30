@@ -29,7 +29,10 @@
     "url": "https://github.com/dragonDScript/gitpod-desktop.git"
   },
   "main": "main.js",
-  "author": "dragonDScript",
+  "author": {
+    "name": "dragonDScript",
+    "email": "agomila96@googlemail.com"
+  },
   "license": "MIT",
   "scripts": {
     "start": "electron main.js",
