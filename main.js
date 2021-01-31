@@ -12,7 +12,7 @@ app.whenReady().then(() => {
     newWin.loadURL(url)
   })
   //tray
-  const tray = new Tray("gitpod." + process.platform === "win32" ? "ico" : "png")
+  const tray = new Tray("./build/gitpod." + process.platform === "win32" ? "ico" : "png")
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Quit', click: () => app.quit()},
   ])
