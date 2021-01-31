@@ -1,11 +1,33 @@
 const {BrowserWindow, app, Menu, Tray} = require("electron")
 
+const menu = Menu.buildFromTemplate([
+  {
+    label: "Shortcuts",
+    submenu: [
+      {
+        role: "toggleDevTools",
+      },
+      {
+        role: "reload",
+      },
+      {
+        role: "forceReload",
+      }
+    ]
+  }
+])
+
 app.whenReady().then(() => {
   const win = new BrowserWindow({center: true})
+  win.on("closed", () => {
+    win.destroy()
+  })
+  win.setMenuBarVisibility(false)
   win.loadURL("https://gitpod.io")
   win.webContents.on("new-window", function(event, url) {
     event.preventDefault()
     const newWin = new BrowserWindow()
+    newWin.setMenuBarVisibility(false)
     newWin.on("closed", () => {
       newWin.destroy()
     })
@@ -25,4 +47,4 @@ app.on("window-all-closed", () => {
   }
 })
 
-Menu.setApplicationMenu(null)
+Menu.setApplicationMenu(menu)
